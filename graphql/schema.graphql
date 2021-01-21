@@ -1,7 +1,15 @@
 #사용자가 뭘 할지를 정의
+type SH {
+name : String!
+age : Int!
+schoooool : String!
+}
+
 
 type Query{
   name : String!
+  people : [SH]!
+  person(id : Int!) : SH
 }
 
 
