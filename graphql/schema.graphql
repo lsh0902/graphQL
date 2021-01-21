@@ -1,5 +1,6 @@
 #사용자가 뭘 할지를 정의
 type SH {
+id : Int!
 name : String!
 age : Int!
 schoooool : String!
