@@ -14,6 +14,7 @@
     "babel-preset-stage-3": "^6.24.1",
     "global": "^4.4.0",
     "graphql-yoga": "^1.18.3",
+    "node-fetch": "^2.6.1",
     "nodemon": "^2.0.7"
   }
 }

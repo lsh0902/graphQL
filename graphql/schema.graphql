@@ -1,4 +1,5 @@
 #사용자가 뭘 할지를 정의
+#디비에 쿼리는 Query고 디비에 insert, delete 하는건 Mutation으로 하는거임. 저기에 정의되어잇음
 type SH {
 id : Int!
 name : String!
@@ -12,6 +13,15 @@ name : String!
 score : Int!
 }
 
+type APIMovie{
+id:Int!
+title:String!
+rating:Float!
+summary:String!
+language:String!
+medium_cover_image:String!
+}
+
 
 type Query{
   name : String!
@@ -19,11 +29,12 @@ type Query{
   person(id : Int!) : SH
   movies : [Movie]!
   movie(id : Int!) : Movie
+  APImovies(limit : Int, rating: Float ) : [APIMovie]!
 }
 
 type Mutation{
-  addMovie(name:String!, score:Int!): Movie!
-  
+  addMovie(name:String!, score:Int!) : Movie!
+  deleteMovie(id : Int!) : Boolean!
 }
 
 
